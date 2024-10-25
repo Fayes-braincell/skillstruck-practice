@@ -1,8 +1,8 @@
+class Person:
+    def __init__(self, name, age, gender):
+        self.name = name
+        self.age = age
+        self.gender = gender
 
-file_path = r'C:\Users\fnwad955\Desktop\Skill Struck Code\example.txt'
-
-
-with open(file_path, "r") as file:
-    content = file.read()
-    print(content)
-
+p1 = Person("Faye", "17", "Nonbinary")
+print("This is: " + p1.name + "." + " They are: " + p1.age + "." + " They are: " + p1.gender + ".")

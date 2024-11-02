@@ -168,3 +168,47 @@ print(p2.gender)
 print(p1.age)
 print(p1.gender)
 print(p2.name) #Having access to the information of the objects and printing them in whatever order we need it in
+
+#{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}
+
+#Lesson: Objects Continued
+ class Cat:
+     def __init__(self, name, age, gender):
+         self.name = name
+         self.age = age
+         self.gender = gender
+
+pet = Cat("Caesar", "1", "Female")
+#Next line is adding an Attribute to the object
+pet.height = 17
+
+print(pet.height)
+
+#
+ class Cat:
+     def __init__(self, name, age, gender):
+         self.name = name
+         self.age = age
+         self.gender = gender
+
+pet = Cat("Caesar", "1", "Female")
+#Next line is deleting a Attribute to the object
+delattr(name)
+
+print(pet.name)
+
+#Object Methods
+
+ class Cat:
+     def __init__(self, name, age, gender):
+         self.name = name
+         self.age = age
+         self.gender = gender
+    def greeting(self):
+        print("Good Morning")
+
+
+pet = Cat("Caesar", "1", "Female")
+#Next line is adding a function name greeting and putting it in the class named Person. The function goes on to print out "Good Morning"
+pet.greeting()
+

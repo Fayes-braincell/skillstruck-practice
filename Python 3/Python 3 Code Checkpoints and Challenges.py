@@ -174,3 +174,104 @@ pet3 = Pet("German Shepherd", "Brown and Black", "Germany")
 # Pet Store Code Challenge under the Creating an Instance Module
 
 #{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}
+
+class Vacation:
+    def __init__(self, place, distance, weather):
+        self.place = place
+        self.distance = distance
+        self.weather = weather
+    def tuesday(self):
+        print("We will be hiking on Tuesday")
+
+summer = Vacation("Hawaii", 2000, "Sunny")
+
+summer.rating = 10
+summer.weather = "rainy"
+
+print(summer)
+print(summer.rating)
+print(summer.weather)
+#Objects Continued Code Checkpoint
+
+class Friday:
+    def __init__(self, activity, friend):
+        self.activity = activity 
+        self.friend = friend
+    def pictures(self):
+        print("We took so many pictures")
+
+thisWeekend = Friday("Movie", "Charlotte")
+
+thisWeekend.money = 20
+
+thisWeekend.friend = "Shane"
+
+print(thisWeekend)
+print(thisWeekend.money)
+print(thisWeekend.friend)
+
+
+class Shopping:
+   
+    def __init__(self, item, quality):
+        self.item = item
+        self.quality = quality
+        self.total = []
+        
+    def spending(self, cost):
+        self.total.append(cost)
+
+# Create an instance of the Shopping class with specified arguments
+sportStore = Shopping("Kayak", "High Quality")
+
+
+sportStore.spending(100)
+sportStore.spending(150)
+sportStore.spending(200)
+
+# Print the total list
+print(sportStore.total)  # Output: [100, 150, 200]
+
+#{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}
+
+stack = []
+
+stack.append("Hi")
+stack.append("Hello")
+stack.append("Hey")
+stack.append("Awe")
+
+stack.pop("Awe")
+print(stack)
+#Stacks Code Checkpoint
+
+first = "r"
+second = "t"
+third = "s"
+fourth = "y"
+fifth = "o"
+
+stack = []
+
+stack.append(third)
+stack.append(second)
+stack.append(fifth)
+stack.append(first)
+stack.append(fourth)
+
+print(stack)
+#Stack Scramble Code Challenge under the Stacks Module
+
+response = input("What food should I bring?")
+
+answer = ["apples", "steak", "potatoes", "carrots"]
+if "s" in response:
+    answer.append(response)
+    print(answer)
+else:
+    print("The input doesn't have the letter s")
+#Foods with the Letter S Coe CHallenge under the Stacks Module
+
+#{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}
+
+this_list = ["Elephant", "Giraffe", "

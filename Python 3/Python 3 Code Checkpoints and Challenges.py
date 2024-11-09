@@ -274,4 +274,69 @@ else:
 
 #{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}
 
-this_list = ["Elephant", "Giraffe", "
+this_list = ["Elephant", "Fossa", "Penguin", "Polar Bear", "Turtles", "Secretary Bird", "Axolotl", "Red Panda", "Okapi", "Shoebill Stork"]
+
+
+def feeding(this_list):
+    if len(this_list) == 1:
+        print("The " + this_list[0] + " has been fed")
+    else:
+        mid = len(this_list) // 2
+        first_half = this_list[:mid]
+        second_half = this_list[mid:]
+
+feeding(first_half)
+feeding(second_half)
+
+feeding(this_list)
+
+
+#CAN YOU FUCKING REPASTE THE PAST CODE YOU FUCKING IDIOT. IT'S NOT THAT HARD TO DO YOU KNOB. anyway, repaste the lost code...
+
+arr = [10, 32, 4, 90, 15, 20, 89, 1, 3, 45, 42, 87, 91, 18, 25, 76, 38, 12]
+
+# Add a number from the user
+num = int(input("Enter a number to add to the list: "))
+arr.append(num)
+
+def mergeSort(sort_list):
+    if len(sort_list) > 1:
+        mid = len(sort_list) // 2
+        L = sort_list[:mid]
+        R = sort_list[mid:]
+        
+        # Recursively sort both halves
+        mergeSort(L)
+        mergeSort(R)
+
+        # Initialize variables for merging
+        i = j = k = 0
+
+        # Merge sorted halves
+        while i < len(L) and j < len(R):
+            if L[i] < R[j]:
+                sort_list[k] = L[i]
+                i += 1
+            else:
+                sort_list[k] = R[j]
+                j += 1
+            k += 1
+
+        # Append remaining elements from L
+        while i < len(L):
+            sort_list[k] = L[i]
+            i += 1
+            k += 1
+
+        # Append remaining elements from R
+        while j < len(R):
+            sort_list[k] = R[j]
+            j += 1
+            k += 1
+    
+    return sort_list
+
+# Sort the list with the user's added number
+sorted_list = mergeSort(arr)
+print(sorted_list)
+

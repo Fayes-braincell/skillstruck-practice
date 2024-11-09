@@ -211,4 +211,114 @@ print(pet.name)
 pet = Cat("Caesar", "1", "Female")
 #Next line is adding a function name greeting and putting it in the class named Person. The function goes on to print out "Good Morning"
 pet.greeting()
+#{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}
 
+#Lesson: Bubble Sort
+#It is an algorithm that can be used ti sirt lists into numerical order. They work by comparing two adjacent numbers, and, if necessary, swapping them into the correct order. They only work with number information
+
+
+#Pseudocode
+#A way to write out the concept of a program that isn't language specific. Looks like computer code, but it's written in a more legible and readable way to help with understanding. 
+
+function BubbleSort(list)
+
+    for all elements in list:
+        if list[i] > list [i+1]
+            swap(list[i], list[i+1])
+        end if 
+    end for
+    return list
+end BubbleSort
+#{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}
+
+#Lesson: Selection Sort
+
+#Pseudocode for selection sort:
+function SelectionSort(list)
+
+   for all elements (i) in list:
+      minimum = i
+      for remaining elements (j) in list:
+         if list[j] < list[minimum]
+            minimum = j
+         end if
+      end for
+      if the index of minimum != i
+         swap list[minimum] and list[i]
+      end if
+   end for
+   return list
+end SelectionSort
+#It works by searching the list for the smallest value, and placing that at the beginning of the list. Two lists are created in this process (sorted and unsorted). It repeatedly searches the unsorted list for the smallest value and then adds it to the end of the sorted list.
+
+#The selection sort is much faster than the Bubble Sort
+
+#{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}
+
+#Lesson: Iteration Sort
+
+#Similar to selection sort, it taskes the next unsorted value and insets it into its correct place in the sorted list.
+
+#Pseudocode for insertion sort:
+function InsertionSort(list)
+
+   insert_spot = 0
+   val_to_insert = 0
+
+   for all elements (i) in list:
+      val_to_insert = list[i]
+      insert_spot = i
+
+      while insert_spot > 0 and list[insert_spot-1] > val_to_insert:
+         list[insert_spot] = list[insert_spot - 1]
+         insert_spot = insert_spot - 1
+      end while
+
+      list[insert_spot] = val_to_insert
+
+   end for
+   return list
+end InsertionSort
+
+#{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}
+
+#Lesson: Merge Sort
+
+#Merge sort algorithm involves dividing the list into n sublists, where each sublist contains one element of the main list. Each of these are considered sorted because they're only one element in size.
+#After creating sublists, merge them into  new sorted sublists repeatedkt until one sorted list remains. Merge sort is recurssive, meaning it calls itself to create each sublist.
+
+#The algorithm for merge sort needs two functions - a function that divides the list into sublists, and a function that merges them back together in order. 
+#ps Merging is extremelt fast because it is a recursibe algorithm and it helps programs to run quickly.
+
+#Pseudocode for Merge Sort:
+def mergeSort(sort_list):
+    if len(sort_list) > 1:
+        mid = len(sort_list) // 2 
+        L = sort_list[:mid]
+        R = sort_list[mid:]
+
+        mergeSort(L)
+        mergeSort(R)
+
+        i = j = k = 0
+
+        while i < len(L) and j < len(R):
+            if L[i] < R[j]:
+                sort_list[k] = L[i]
+                i += 1
+            else:
+                sort_list[k] = R[j]
+                j += 1
+            k += 1
+
+        while i < len(L):
+            sort_list[k] = L[i]
+            i += 1
+            k += 1
+
+        while j < len(R):
+            sort_list[k] = R[j]
+            j += 1
+            k += 1
+
+    return sort_list
